@@ -184,7 +184,7 @@ async def admin_panel(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except FileNotFoundError:
         await update.message.reply_text("❌ Лог-файл не найден.")
 
-if name == "__main__":
+if __name__ == "__main__":
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("menu", menu))
